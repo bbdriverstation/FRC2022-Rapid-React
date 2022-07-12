@@ -38,8 +38,8 @@ public class ClimberSubsystem extends BitBucketsSubsystem {
   private boolean climberExtending = false;
   DoubleSolenoid elevatorSolenoid;
 
-  private int fullExtendPositionUprightRight = 20033;
-  private int fullExtendPositionUprightLeft = 19850;
+  private int fullExtendPositionUprightRight = 19550;
+  private int fullExtendPositionUprightLeft = 19650;
   private int partialExtendPosition = fullExtendPositionUprightRight / 2;
   private int fullRetractPosition = 0; // TODO: change this number
 

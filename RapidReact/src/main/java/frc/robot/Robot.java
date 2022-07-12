@@ -96,7 +96,7 @@ public class Robot extends TimedRobot {
     if (config.enableClimberSubsystem) {
       this.robotSubsystems.add(climberSubsystem = new ClimberSubsystem(this.config));
     }
-
+    this.robotSubsystems.add(new VisionSubsystem(this.config));
     // create a new field to update
     SmartDashboard.putData("Field", field);
 
@@ -339,6 +339,7 @@ public class Robot extends TimedRobot {
   @Override
   public void disabledInit() {
     this.robotSubsystems.forEach(BitBucketsSubsystem::disable);
+    drivetrainSubsystem.stop();
   }
 
   /** This function is called periodically when disabled. */
